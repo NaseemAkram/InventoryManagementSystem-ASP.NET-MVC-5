@@ -1,0 +1,42 @@
+﻿@model InventoryManagementSystem.Models.Purchase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Product Purchased")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase_prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Purchased Quantity")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase_qnty)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Purchased Date")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "PurchaseProduct","Purchase",new { @class="btn btn-success"})
+</p>
